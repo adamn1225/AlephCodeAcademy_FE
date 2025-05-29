@@ -1,7 +1,5 @@
 // app/page.tsx
 'use client'
-
-import HomeLayout from '@/components/layouts/HomeLayout'
 import Card from '@/components/Card'
 import { motion } from 'framer-motion'
 
@@ -38,12 +36,24 @@ export default function HomePage() {
   ]
 
   return (
-    <HomeLayout>
-      <h2 className="text-2xl font-bold mb-4">Welcome to AlephCode Academy</h2>
-      <p className="mb-6 text-gray-700 max-w-2xl">
-        Teach, learn, and grow with fun code missions, progress tracking, and interactive assignments.
-      </p>
-
+    <>
+      <div className="mb-8 bg-gradient-to-r from-pink-200 via-sky-100 to-indigo-100 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-1">
+              <h2 className="text-2xl md:text-4xl font-extrabold text-blue-700 mb-2">Welcome to AlephCode Academy!</h2>
+              <p className="text-lg md:text-xl text-blue-900 mb-4">
+                Where kids become confident coders and parents stay connected. <span className="text-pink-600 font-bold">Fun, safe, and effective</span> coding lessons for ages 7–14.
+              </p>
+              <ul className="list-disc pl-6 text-blue-800 space-y-1 text-base">
+                <li>Live 1:1 and group tutoring</li>
+                <li>Interactive coding missions and games</li>
+                <li>Progress tracking for parents</li>
+                <li>Friendly, expert instructors</li>
+              </ul>
+            </div>
+            <div className="flex-shrink-0">
+              <span className="text-[5rem] md:text-[7rem] drop-shadow">🚀</span>
+            </div>
+          </div>
       <motion.div
         initial="hidden"
         animate="visible"
@@ -55,6 +65,6 @@ export default function HomePage() {
           </motion.div>
         ))}
       </motion.div>
-    </HomeLayout>
+    </>
   )
 }
