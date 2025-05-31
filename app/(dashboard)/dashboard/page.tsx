@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function HomePage() {
   return (
-    <HomeLayout>
+    <>
       <h2 className="text-2xl font-bold mb-4">Welcome to AlephCode Academy</h2>
       <p className="mb-6 text-gray-700 max-w-2xl">
         Teach, learn, and grow with fun code missions, progress tracking, and interactive assignments.
@@ -28,6 +28,6 @@ export default function HomePage() {
           <Link href="/dashboard/teacher" className="inline-block mt-2 text-blue-600 hover:underline">Enter Panel</Link>
         </div>
       </div>
-    </HomeLayout>
+    </>
   )
 }
